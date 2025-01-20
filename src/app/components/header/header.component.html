@@ -1,4 +1,7 @@
 <div class="bg-slate-100 px-4 py-3 shadow-md flex justify-between items-center">
-    <span class="text-xl">Tienda</span>
-    <app-primary-button [label]="cart()" (btnClicked)="showButtonClicked()"/>
+    <button class="text-xl" routerLink="/" >Tienda</button>
+    <app-primary-button 
+    [label]="'Cart ('+ cartService.cart().length +')'"
+    routerLink="/cart"
+    />
 </div>
